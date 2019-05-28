@@ -10,16 +10,16 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
     .setThumbnail(Sal.user.avatarURL)
-    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png') //åäÇ ÍØ ÇáÕæÑå Çáí ÊÈíåÇ
-    .setTitle('ÚÖæ ÌÏíÏ!')
-    .setDescription('ãÑÍÈÇ Èß ÈÇáÓíÑÝÑ')
-    .addField('``ÇíÏí ÇáÚÖæ``:',"" +  Sal.user.id, true)
-    .addField('``ÊÇÞ ÇáÚÖæ``', Sal.user.discriminator, true)
-    .addField('``Êã ÇáÇäÔÇÁ Ýí``', Sal.user.createdAt, true)
-    .addField(' ??  ÇäÊ ÑÞã',`**[ ${Sal.guild.memberCount} ]**`,true)
+    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png') //هنا حط الصوره الي تبيها
+    .setTitle('عضو جديد!')
+    .setDescription('مرحبا بك بالسيرفر')
+    .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
+    .addField('``تاق العضو``', Sal.user.discriminator, true)
+    .addField('``تم الانشاء في``', Sal.user.createdAt, true)
+    .addField(' ??  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('name', ' (?????????????)') // åäÇ ÍØ ÇÓã ÇáÑæã Çáí ÊÈíå íßÊÈ Ýíå
+    var channel =Sal.guild.channels.find('name', ' (￦𝐄𝐋𝐶𝐎𝑴𝙀)') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
     });
@@ -33,7 +33,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` **: ÚÏÏ ÇáÇÚÖÇÁ ÇáãÓÊáãíä**`); 
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` **: عدد الاعضاء المستلمين**`); 
  message.delete(); 
 };     
 });
@@ -43,7 +43,7 @@ var prefix = "%" // ÇáÈÑíÝßÓ
     var args = message.content.substring(prefix.length).split(" ");
     if (message.content.startsWith(prefix + "clear")) { // 
         if(!message.channel.guild) return message.reply('**? ÇÓÝ áßä åÐÇ ÇáÇãÑ ááÓíÑÝÑÇÊ ÝÞØ **');         
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**?  áÇ íæÌÏ áÏíß ÕáÇÍíÉ áãÓÍ ÇáÔÇÊ**');
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**?  تم مسح الشات**');
 var msg;
 msg = parseInt();
 
