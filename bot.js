@@ -10,46 +10,46 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
     .setThumbnail(Sal.user.avatarURL)
-    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png') //Â‰« Õÿ «·’Ê—Â «·Ì  »ÌÂ«
-    .setTitle('⁄÷Ê ÃœÌœ!')
-    .setDescription('„—Õ»« »ﬂ »«·”Ì—›—')
-    .addField('``«ÌœÌ «·⁄÷Ê``:',"" +  Sal.user.id, true)
-    .addField('`` «ﬁ «·⁄÷Ê``', Sal.user.discriminator, true)
-    .addField('`` „ «·«‰‘«¡ ›Ì``', Sal.user.createdAt, true)
-    .addField(' ??  «‰  —ﬁ„',`**[ ${Sal.guild.memberCount} ]**`,true)
+    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png') //√•√§√á √ç√ò √á√°√ï√¶√ë√• √á√°√≠ √ä√à√≠√•√á
+    .setTitle('√ö√ñ√¶ √å√è√≠√è!')
+    .setDescription('√£√ë√ç√à√á √à√ü √à√á√°√ì√≠√ë√ù√ë')
+    .addField('``√á√≠√è√≠ √á√°√ö√ñ√¶``:',"" +  Sal.user.id, true)
+    .addField('``√ä√á√û √á√°√ö√ñ√¶``', Sal.user.discriminator, true)
+    .addField('``√ä√£ √á√°√á√§√î√á√Å √ù√≠``', Sal.user.createdAt, true)
+    .addField(' ??  √á√§√ä √ë√û√£',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('name', ' (?????????????)') // Â‰« Õÿ «”„ «·—Ê„ «·Ì  »ÌÂ Ìﬂ » ›ÌÂ
+    var channel =Sal.guild.channels.find('name', ' (?????????????)') // √•√§√á √ç√ò √á√ì√£ √á√°√ë√¶√£ √á√°√≠ √ä√à√≠√• √≠√ü√ä√à √ù√≠√•
     if (!channel) return;
     channel.send({embed : embed});
     });
 
 client.on("message", message => {
 
-            if (message.content.startsWith(prefix + "bc")) {  ///«·«„—
+            if (message.content.startsWith(prefix + "bc")) {  ///√á√°√á√£√ë
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` **: ⁄œœ «·«⁄÷«¡ «·„” ·„Ì‰**`); 
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` **: √ö√è√è √á√°√á√ö√ñ√á√Å √á√°√£√ì√ä√°√£√≠√§**`); 
  message.delete(); 
 };     
 });
 
 client.on("message", message => {
-var prefix = "%" // «·»—Ì›ﬂ”
+var prefix = "%" // √á√°√à√ë√≠√ù√ü√ì
     var args = message.content.substring(prefix.length).split(" ");
     if (message.content.startsWith(prefix + "clear")) { // 
-        if(!message.channel.guild) return message.reply('**? «”› ·ﬂ‰ Â–« «·«„— ··”Ì—›—«  ›ﬁÿ **');         
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**?  ·« ÌÊÃœ ·œÌﬂ ’·«ÕÌ… ·„”Õ «·‘« **');
+        if(!message.channel.guild) return message.reply('**? √á√ì√ù √°√ü√§ √•√ê√á √á√°√á√£√ë √°√°√ì√≠√ë√ù√ë√á√ä √ù√û√ò **');         
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**?  √°√á √≠√¶√å√è √°√è√≠√ü √ï√°√á√ç√≠√â √°√£√ì√ç √á√°√î√á√ä**');
 var msg;
 msg = parseInt();
 
 message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
 message.channel.sendMessage("", {embed: {
-title: "`` ‹‹„ „”Õ «·‘«  ``",
+title: "``√ä√ú√ú√£ √£√ì√ç √á√°√î√á√ä ``",
 color: 0x06DF00,
 footer: {
   
@@ -82,14 +82,16 @@ if(message.content === '*help') {
   var EsTeKnAN = new Discord.RichEmbed()
   .setColor('RANDOM')
 message.author.send(`
-***__Ê’› ⁄‰ «·»Ê __***
+***__√¶√ï√ù √ö√§ √á√°√à√¶√ä__***
 **
-????????????? {?«Ê«„— «·»Ê ?} ?????????????
-? %bc ? »—Êœﬂ«”  
-? %clear ? „”Õ «·‘« 
-? %ping ? ·⁄—÷ „⁄·Ê„«  «·”Ì—›—
+????????????? {?√á√¶√á√£√ë √á√°√à√¶√ä?} ?????????????
+? %bc ? √à√ë√¶√è√ü√á√ì√ä 
+? %clear ? √£√ì√ç √á√°√î√á√ä
+? %ping ? √°√ö√ë√ñ √£√ö√°√¶√£√á√ä √á√°√ì√≠√ë√ù√ë
 ????????????? {? By Ayman ALmonster ?} ?????????????
 **
 `);
 }
 })
+
+client.login(process.env.BOT_TOKEN);
