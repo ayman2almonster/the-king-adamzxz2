@@ -6,6 +6,26 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);  
 });
 
+client.on("guildMemberAdd", member => {
+    member.createDM().then(function (channel) {
+    return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+  :crown:اسم العضو  ${member}:crown:  
+  انت العضو رقم ${member.guild.memberCount} `) 
+  }).catch(console.error)
+  })
+
+client.on('guildMemberAdd', member => {
+  
+  const channel = member.guild.channels.find(ch => ch.name === '￦𝐄𝐋𝐶𝐎𝑴𝙀');
+ 
+  if (!channel) return;
+
+  channel.send(`Welcome to the server, ${member}`);
+});
+
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","「 🆉🆇🆉」"));
+    });
 
 client.on("message", message => {
   var prefix = "%";
