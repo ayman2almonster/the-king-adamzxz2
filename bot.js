@@ -30,7 +30,7 @@ client.on('guildMemberAdd', member=> {
 
 client.on("message", message => {
 
-            if (message.content.startsWith(prefix + "bc")) {  ///ÇáÇãÑ
+            if (message.content.startsWith(prefix + "bc")) {  ///hhhhh
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -46,7 +46,7 @@ client.on("message", message => {
 var prefix = "%" // ÇáÈÑíÝßÓ
     var args = message.content.substring(prefix.length).split(" ");
     if (message.content.startsWith(prefix + "clear")) { // 
-        if(!message.channel.guild) return message.reply('**? ÇÓÝ áßä åÐÇ ÇáÇãÑ ááÓíÑÝÑÇÊ ÝÞØ **');         
+        if(!message.channel.guild) return message.reply('**? o **');         
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**?  تم مسح الشات**');
 var msg;
 msg = parseInt();
