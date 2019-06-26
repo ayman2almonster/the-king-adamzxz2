@@ -2,17 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = "%";
 
-var bot = new Eris("BOT_TOKEN");
-bot.on("ready", () => {
-    console.log("Ready!");
-});
-bot.on("messageCreate", (msg) => {
-    if(msg.content === "!ping") {
-        bot.createMessage(msg.channel.id, "Pong!");
-    }
-});
-bot.connect();
-
 
 client.on("message", message => {
     var args = message.content.substring(prefix.length).split(" ");
@@ -36,3 +25,17 @@ client.on("message", message => {
 };     
 });
 
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : EX Clan`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`%help |the bot by AdamZxz | Vettel`,"http://twitch.tv/Death Shop")
+client.user.setStatus("dnd")
+});
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
