@@ -2,9 +2,16 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = "%";
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);  
+var bot = new Eris("BOT_TOKEN");
+bot.on("ready", () => {
+    console.log("Ready!");
 });
+bot.on("messageCreate", (msg) => {
+    if(msg.content === "!ping") {
+        bot.createMessage(msg.channel.id, "Pong!");
+    }
+});
+bot.connect();
 
 
 client.on("message", message => {
@@ -29,4 +36,3 @@ client.on("message", message => {
 };     
 });
 
-client.login(process.env.BOT_TOKEN);
